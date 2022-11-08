@@ -1,6 +1,6 @@
 body{
-    height: 800px;
-    width: 1000px;
+    height: 58em;
+    width: 100%;
     border:3px solid blue;
     position: relative;
 }
@@ -20,8 +20,8 @@ main{
 }
 
 div{
-    height: 150px;
-    width: 150px;
+    height: 5em;
+    width: 5em;
     border: 2px solid black;
     
 
