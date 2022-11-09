@@ -16,17 +16,17 @@ div{
     height: 5em;
     width: 20em;
     border: 2px solid black;
-    /*position: relative;
+    position: relative;
     top:10%;
     left:50%;
-    transform: translate(-50%, -50%);*/
+    transform: translate(-50%, -50%);
     text-align: center;
+    
 }
 #tasks{
     min-height: 5em;
     border: none;
-    display:inline-flex;
-
+    
 }
 .tarea{
 display: grid;
