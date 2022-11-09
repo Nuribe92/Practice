@@ -8,6 +8,7 @@ main{
    height: 100%;
    width: 100%; 
    border: 2px solid red;
+
    }
 
 div{
@@ -22,5 +23,12 @@ div{
 }
 #tasks{
     min-height: 5em;
-    height: fit-content;
+    border: none;
+    display:inline-flex;
+
+}
+.tarea{
+display: grid;
+grid-template-columns: 80% 20%;
+
 }
