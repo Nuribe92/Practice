@@ -20,3 +20,7 @@ div{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+#tasks{
+    min-height: 5em;
+    height: fit-content;
+}
