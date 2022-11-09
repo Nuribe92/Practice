@@ -21,7 +21,7 @@ function addNewTask(){
     document.querySelector('input').value = '';
     document.querySelector('button').disabled = true;
     tasks.push(text) 
-    
+    //!!!!!!me esta genrando un problema por que cada vez que le undo en submit, el coge todo los items en el array y vuelve y crea un div nuevo.
     tasks.forEach((tarea) => {
     const div = document.createElement('div')
     div.classList.add('tarea')

@@ -8,17 +8,18 @@ main{
    height: 100%;
    width: 100%; 
    border: 2px solid red;
-
+    display: grid;
+    grid-template-columns: auto;
    }
 
 div{
     height: 5em;
     width: 20em;
     border: 2px solid black;
-    position: relative;
+    /*position: relative;
     top:10%;
     left:50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     text-align: center;
 }
 #tasks{
