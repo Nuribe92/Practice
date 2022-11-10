@@ -36,6 +36,11 @@ div input{
     margin: auto auto auto auto;
     
 }
+#newTask:hover{
+    background-color: black;
+    color: white;
+
+}
 
 
 div{
@@ -69,4 +74,9 @@ div{
     width: 80%;
     margin:auto auto auto auto;
     
+}
+#internalButton:hover{
+    background-color: black;
+    color: white;
+
 }

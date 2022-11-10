@@ -31,10 +31,14 @@ function addNewTask(){
             div.classList.add('tarea');
             div.innerHTML = `
             <h2>${tarea}</h2>
-            <button id="internalButton">x</button>
+            <button id="internalButton" onclick="eliminateTask()">x</button>
             `
             division.appendChild(div)
         }
 })
+}
+
+function eliminateTask(){
+
 }
 
