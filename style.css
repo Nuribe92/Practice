@@ -10,16 +10,42 @@ main{
    border: 2px solid red;
     display: grid;
     grid-template-columns: auto;
+    justify-content: center;
+    vertical-align: center;
    }
+#form{
+    margin-top: 20%;
+
+}
+
+#insub{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+}
+div input{  
+    text-align: center;   
+}
+#newTask{
+    border-radius:  12px;
+    height: 80%;
+    width: 80%;
+    vertical-align: middle;
+    margin: 5% 10%
+    
+}
+
 
 div{
     height: 5em;
-    width: 20em;
-    border: 2px solid black;
-    position: relative;
+    width: 30em;
+    border: 1px solid black;
+    /*position: relative;
     top:10%;
     left:50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     text-align: center;
     
 }
@@ -29,7 +55,14 @@ div{
     
 }
 .tarea{
+
     display: grid;
     grid-template-columns: 80% 20%;
 
+}
+#internalButton{
+    border-radius: 12px;
+    height: 80%;
+    width: 80%;
+    margin: 7% 10%
 }
