@@ -33,36 +33,40 @@ div input{
     height: 80%;
     width: 80%;
     vertical-align: middle;
-    margin: 5% 10%
+    margin: auto auto auto auto;
     
 }
 
 
 div{
     height: 5em;
-    width: 30em;
+    width: 45em;
     border: 1px solid black;
     /*position: relative;
     top:10%;
     left:50%;
     transform: translate(-50%, -50%);*/
     text-align: center;
-    
 }
 #tasks{
     min-height: 5em;
     border: none;
     
+    
 }
 .tarea{
-
     display: grid;
     grid-template-columns: 80% 20%;
+    overflow-wrap: normal;
+    height: max-content;
+    
+
 
 }
 #internalButton{
     border-radius: 12px;
-    height: 80%;
+    height: 4em;
     width: 80%;
-    margin: 7% 10%
+    margin:auto auto auto auto;
+    
 }
