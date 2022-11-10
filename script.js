@@ -1,5 +1,4 @@
-let tasks = []
-console.log(tasks)
+
 document.addEventListener('DOMContentLoaded', function (){ 
         document.querySelector('button').disabled = true
         document.querySelector('input').onkeyup = () => {
@@ -11,7 +10,11 @@ document.addEventListener('DOMContentLoaded', function (){
         }
 
 })
+let tasks = []
+console.log(tasks)
+
 const division = document.getElementById('tasks')
+
 function addNewTask(){
     //tomar la informacion que esta en #input y agregarla a la variable tasks
     const text = document.querySelector('#input').value;
@@ -21,16 +24,17 @@ function addNewTask(){
     document.querySelector('input').value = '';
     document.querySelector('button').disabled = true;
     tasks.push(text) 
-    //!!!!!!me esta genrando un problema por que cada vez que le undo en submit, el coge todo los items en el array y vuelve y crea un div nuevo.
-    tasks.forEach((tarea) => {
-    const div = document.createElement('div')
-    div.classList.add('tarea')
-    div.innerHTML = `
-    <h2>${tarea}</h2>
-    <button>x</button>
-    `
-    division.appendChild(div)
-
+    let existe = tasks[tasks.length -1];
+    tasks.forEach((tarea) => {  
+        if(tarea === existe) {    
+            const div = document.createElement('div')
+            div.classList.add('tarea');
+            div.innerHTML = `
+            <h2>${tarea}</h2>
+            <button>x</button>
+            `
+            division.appendChild(div)
+        }
 })
 }
 

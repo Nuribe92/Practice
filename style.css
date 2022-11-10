@@ -29,7 +29,7 @@ div{
     
 }
 .tarea{
-display: grid;
-grid-template-columns: 80% 20%;
+    display: grid;
+    grid-template-columns: 80% 20%;
 
 }
