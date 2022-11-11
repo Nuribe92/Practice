@@ -8,16 +8,10 @@ document.addEventListener('DOMContentLoaded', function (){
                document.querySelector('button').disabled = true; 
             }
         }
-
-})
-let tasks = []
-for(let i = 0; i < tasks.length - 1; i++){
-    if(i % 2 == 0){
-      document.getElementsByClassName('tarea').style.backgroundColor = "blue"; 
-    }else{
-      document.getElementsByClassName('tarea').style.backgroundColor = "red"; 
     }
-}
+    )
+let tasks = []
+
 console.log(tasks)
 
 const division = document.getElementById('tasks')
@@ -39,16 +33,23 @@ function addNewTask(){
             div.innerHTML = `
             <h2>${tarea}</h2>
             <button id="internalButton" onclick="eliminateTask()">x</button>
-            `
-            division.appendChild(div)           
+            `        
+        //let redBack = document.querySelector('tarea');
+        //let blueBack = document.querySelector('tarea');
+        //for(let i = 0; i < tasks.length - 1; i++){
+          //  if(i % 2 == 0){
+            //    blueBack.style.color = "blue"; 
+            //}else{
+              //  redBack.style.color="red"; 
+            //}
+            division.appendChild(div) 
         }
-
-})
-}
-
+                      
+        }
+)}
 
 
 function eliminateTask(){
-
 }
+
 

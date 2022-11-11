@@ -64,10 +64,14 @@ div{
     grid-template-columns: 80% 20%;
     overflow-wrap: normal;
     height: max-content;
-    background-color: blue;
+    /*background-color: blue;*/
 
 
 }
+.tarea:nth-child(even) {
+    background: rgba(7, 31, 44, 0.123);
+  }
+
 #internalButton{
     border-radius: 12px;
     height: 4em;
