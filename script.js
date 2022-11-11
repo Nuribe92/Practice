@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', function (){
 
 })
 let tasks = []
+for(let i = 0; i < tasks.length - 1; i++){
+    if(i % 2 == 0){
+      document.getElementsByClassName('tarea').style.backgroundColor = "blue"; 
+    }else{
+      document.getElementsByClassName('tarea').style.backgroundColor = "red"; 
+    }
+}
 console.log(tasks)
 
 const division = document.getElementById('tasks')
@@ -33,10 +40,13 @@ function addNewTask(){
             <h2>${tarea}</h2>
             <button id="internalButton" onclick="eliminateTask()">x</button>
             `
-            division.appendChild(div)
+            division.appendChild(div)           
         }
+
 })
 }
+
+
 
 function eliminateTask(){
 

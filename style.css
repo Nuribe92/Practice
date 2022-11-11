@@ -64,7 +64,7 @@ div{
     grid-template-columns: 80% 20%;
     overflow-wrap: normal;
     height: max-content;
-    
+    background-color: blue;
 
 
 }
