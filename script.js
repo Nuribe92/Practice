@@ -27,30 +27,29 @@ function addNewTask(){
     tasks.push(text) 
     let existe = tasks[tasks.length -1];
     tasks.forEach((tarea) => {  
-        if(tarea === existe) {    
+        if(tarea == existe) {    
             const div = document.createElement('div')
             div.classList.add('tarea');
             div.innerHTML = `
-            <h2>${tarea}</h2>
-            <button id="internalButton" onclick="eliminateTask()">x</button>
+            <h2><li>${tarea}</li></h2>
+            <button id="internalButton">x</button>
             `        
-        //let redBack = document.querySelector('tarea');
-        //let blueBack = document.querySelector('tarea');
-        //for(let i = 0; i < tasks.length - 1; i++){
-          //  if(i % 2 == 0){
-            //    blueBack.style.color = "blue"; 
-            //}else{
-              //  redBack.style.color="red"; 
-            //}
             division.appendChild(div) 
-        }
-                      
-        }
-)}
-
-
-function eliminateTask(){
-    
+        }           
+        })
+        let close = document.querySelectorAll('#internalButton');
+            for(let i = 0; i < close.length; i++){
+                close[i].addEventListener('click', () => {
+                    close[i].parentElement.style.opacity = 0;
+                    setTimeout(()=> {    
+                close[i].parentElement.style.display = "none";
+                close[i].parentElement.remove();
+            }, 500); 
+    })
 }
+}
+
+
+
 
 
