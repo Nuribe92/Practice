@@ -18,15 +18,24 @@ main{
 
 }
 
+
+#title{
+    background: rgba(1, 13, 123, 0.371);
+    border: 1px solid black
+}
 #insub{
     display: grid;
     grid-template-columns: 60% 40%;
     vertical-align: middle;
     text-align: center;
     justify-content: center;
+    background: rgba(7, 31, 44, 0.123);
 }
 div input{  
-    text-align: center;   
+    text-align: center;
+    background: rgba(7, 31, 44, 0.123);
+    border-radius: 15px;   
+    border: 1px transparent rgba(7, 31, 44, 0.123);
 }
 #newTask{
     border-radius:  12px;
@@ -46,12 +55,13 @@ div input{
 div{
     height: 5em;
     width: 45em;
-    border: 1px solid black;
+   /* border: 1px solid black;
     /*position: relative;
     top:10%;
     left:50%;
     transform: translate(-50%, -50%);*/
     text-align: center;
+    border-radius: 15px;
 }
 #tasks{
     min-height: 5em;
@@ -70,6 +80,9 @@ div{
 }
 .tarea:nth-child(even) {
     background: rgba(7, 31, 44, 0.123);
+  }
+  .tarea:nth-child(odd) {
+    background: rgba(1, 13, 123, 0.371);
   }
 
 #internalButton{
