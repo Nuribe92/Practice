@@ -47,7 +47,7 @@ function addNewTask() {
   }
 }
 const eliminarTarea = (tareita) => {
-  const item = tasks.find((tarea) => tarea === tareita);
+  const item = tasks.findIndex((tarea) => tarea === tareita);
   let indice = tasks.indexOf(item);
   tasks.splice(indice, 1);
 };
