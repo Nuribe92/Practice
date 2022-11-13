@@ -29,7 +29,7 @@ function addNewTask() {
       div.classList.add("tarea");
       div.innerHTML = `
             <h2><li>${tarea}</li></h2>
-            <button id="internalButton">x</button>
+            <button id="internalButton">x</button><br>
             `;
       division.appendChild(div);
     }
