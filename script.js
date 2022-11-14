@@ -45,12 +45,14 @@ const eliminarTarea = (tareita) => {
 
 const removeAll = () => {
   let vaciar = document.querySelector("#internalButton");
-  tasks.forEach((item) => { 
+  while(tasks.length >= 0){ 
     setTimeout(() => {
     vaciar.parentElement.style.display = "none";
     vaciar.parentElement.remove(); 
-    },1000    
-  )})}
+    },1000)
+}
+}
+
 
 
 const quitarTask = () => {
