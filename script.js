@@ -33,21 +33,36 @@ function addNewTask() {
             `;
       division.appendChild(div);
     }
+    quitarTask()
   });
-  let close = document.querySelectorAll("#internalButton");
-  for (let i = 0; i < close.length; i++) {
-    close[i].addEventListener("click", () => {
-      close[i].parentElement.style.opacity = 0;
-      setTimeout(() => {
-        close[i].parentElement.style.display = "none";
-        close[i].parentElement.remove();
-        eliminarTarea();
-      }, 500);
-    });
-  }
 }
 const eliminarTarea = (tareita) => {
   const item = tasks.findIndex((tarea) => tarea === tareita);
-  let indice = tasks.indexOf(item);
+  let indice = tasks.indexOf(tareita);
   tasks.splice(indice, 1);
 };
+
+
+const removeAll = () => {
+  let vaciar = document.querySelector("#internalButton");
+  tasks.forEach((item) => { 
+    setTimeout(() => {
+    vaciar.parentElement.style.display = "none";
+    vaciar.parentElement.remove(); 
+    },1000    
+  )})}
+
+
+const quitarTask = () => {
+let close = document.querySelectorAll("#internalButton");
+for (let i = 0; i < close.length; i++) {
+  close[i].addEventListener("click", () => {
+    close[i].parentElement.style.opacity = 0;
+    setTimeout(() => {
+      close[i].parentElement.style.display = "none";
+      close[i].parentElement.remove();
+      eliminarTarea();
+    }, 500);
+  });
+}
+}
