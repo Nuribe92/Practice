@@ -20,7 +20,6 @@ function addNewTask() {
   document.querySelector("button").disabled = true;
   tasks.push(text);
 
-
   let existe = tasks[tasks.length - 1];
 
   tasks.forEach((tarea) => {
@@ -33,7 +32,7 @@ function addNewTask() {
             `;
       division.appendChild(div);
     }
-    quitarTask()
+    quitarTask();
   });
 }
 const eliminarTarea = (tareita) => {
@@ -42,29 +41,23 @@ const eliminarTarea = (tareita) => {
   tasks.splice(indice, 1);
 };
 
-
 const removeAll = () => {
-  let vaciar = document.querySelector("#internalButton");
-  while(tasks.length >= 0){ 
-    setTimeout(() => {
-    vaciar.parentElement.style.display = "none";
-    vaciar.parentElement.remove(); 
-    },1000)
-}
-}
-
-
+const parent = document.getElementById("tasks");
+let child = document.getElementsByClassName("tarea");
+    parent.remove(child);
+    tasks.length = 0;
+};
 
 const quitarTask = () => {
-let close = document.querySelectorAll("#internalButton");
-for (let i = 0; i < close.length; i++) {
-  close[i].addEventListener("click", () => {
-    close[i].parentElement.style.opacity = 0;
-    setTimeout(() => {
-      close[i].parentElement.style.display = "none";
-      close[i].parentElement.remove();
-      eliminarTarea();
-    }, 500);
-  });
-}
-}
+  let close = document.querySelectorAll("#internalButton");
+  for (let i = 0; i < close.length; i++) {
+    close[i].addEventListener("click", () => {
+      close[i].parentElement.style.opacity = 0;
+      setTimeout(() => {
+        close[i].parentElement.style.display = "none";
+        close[i].parentElement.remove();
+        eliminarTarea();
+      }, 500);
+    });
+  }
+};
