@@ -26,9 +26,10 @@ function addNewTask() {
     if (tarea === existe) {
       const div = document.createElement("div");
       div.classList.add("tarea");
+      div.id = "tareaa"
       div.innerHTML = `
             <h2><li>${tarea}</li></h2>
-            <button id="internalButton">x</button><br>
+            <button id="internalButton" class="botonInterno">x</button><br>
             `;
       division.appendChild(div);
     }
@@ -42,8 +43,8 @@ const eliminarTarea = (tareita) => {
 };
 
 const removeAll = () => {
-const parent = document.getElementById("tasks");
-let child = document.getElementsByClassName("tarea");
+let parent = document.getElementById("tasks");
+let child = document.querySelectorAll("#tarea");
     parent.remove(child);
     tasks.length = 0;
 };

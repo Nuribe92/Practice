@@ -1,10 +1,11 @@
 body {
-  height: 57em;
+  height: 56em;
   width: 100%;
   border: 3px solid blue;
   margin: auto;
   font-family: -apple-system, blinkMacSystemFont, sans-serif;
   overflow: auto;
+  overflow-x: hidden;
   background: linear-gradient(
     315deg,
     rgba(62, 40, 93, 0.474) 3%,
@@ -185,6 +186,8 @@ div {
   height: 4em;
   width: 80%;
   cursor: pointer;
+  margin: auto 100px auto auto;
+ 
   
 }
 #internalButton:hover {
