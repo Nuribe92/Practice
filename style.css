@@ -20,7 +20,7 @@ body {
   }
 }
 
-@keyframes gradient {
+/*@keyframes gradient {*
   0% {
     background-position: 0% 0%;
   }
@@ -31,7 +31,7 @@ body {
     background-position: 0% 0%;
   }
 }
-.wave {
+/*.wave {
   background: rgb(255 255 255/25%);
   border-radius: 1000% 1000% 0 0;
   position: fixed;
@@ -70,7 +70,7 @@ body {
   100% {
     transform: translateX(1);
   }
-}
+}*/
 
 
 main {
@@ -98,6 +98,40 @@ h2 {
   background: rgba(1, 13, 123, 0.371);
   border: 1px solid black;
 }
+
+/*Animation*/
+#title h1{
+  position: relative;
+  top:-25%;
+  font-family: 'Courier New', Courier, monospace;
+  animation-name: drop;
+  font-size: 50px;
+  animation-duration: 5s;
+  background: -webkit-linear-gradient(70deg, black 25%, red 75%);
+  background-size: 20%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  color:none;
+  background-color: none;
+}
+@keyframes drop {
+  0% {top:-320px; color: black};
+  100%{background: -webkit-linear-gradient(360deg, black 25%, red 75%, white);
+    
+   }
+  /*25%{ top:-150%;background: linear-gradient(90deg, red 75%, black 25%)}
+  /*50% {background: -webkit-linear-gradient(-180deg,green 75%, black 75%,);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text; top: -100%}
+  75%{background: -webkit-linear-gradient(-180deg,green 75%, black 75%,);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text; top: -50%} */
+}
+  
+
 #insub {
   display: grid;
   grid-template-columns: 60% 40%;
