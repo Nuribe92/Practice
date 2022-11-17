@@ -116,7 +116,7 @@ h2 {
   background-color: none;
 }
 @keyframes drop {
-  0% {top:-320px; color: black};
+  0% {top:-250%; color: black};
   100%{background: -webkit-linear-gradient(360deg, black 25%, red 75%, white);
     
    }
@@ -179,8 +179,14 @@ div {
 .tarea {
   display:grid;
   grid-template-columns: 80% 20%;
+  max-height: 5em;
   min-height: 5em;
-  width: 98%
+  width: 98%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  align-items: center;
+  color: white;
+  
   
 }
 ::-webkit-scrollbar {
@@ -211,20 +217,20 @@ div {
   background: rgba(1, 13, 123, 0.371);
 }
 
-#internalButton {
+.botonInterno {
   position: relative;
   top:50%;
   left:90%;
-  transform: translate(-90%,-50%);
+  transform: translate(-110%,-75%);
   border-radius: 12px;
   height: 4em;
   width: 80%;
   cursor: pointer;
-  margin: auto 100px auto auto;
+  margin: auto auto auto auto;
  
   
 }
-#internalButton:hover {
+.botonInterno:hover {
   background-color: black;
   color: white;
 }
