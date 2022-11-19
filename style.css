@@ -5,27 +5,56 @@ body {
   font-family: -apple-system, blinkMacSystemFont, sans-serif;
   overflow: auto;
   overflow-x: hidden;
-  /*background-attachment: fixed;*/
-  background: linear-gradient(356deg, #1519e8, #9f1d08, #f6c103, #1519e8 );
+  background-attachment: fixed;
+  background: linear-gradient(90deg, #1519e8, #0d7fb0, lightblue );
   background-size: 500% 500%;
 
-  -webkit-animation: changeColor 16s ease infinite;
-  animation: changeColor 16s ease infinite;
-  @media (max-width: 600px) {
-    width:600px;
-    height: 600px;
-  }
+  -webkit-animation: changeColor s ;
+  animation: changeColor 15s infinite;
+
 }
+ @media (max-width:730px) {
+  #title, #firsItem, #eliminarTodas, #insub, #tasks{  
+    width: 80%;
+    position: relative;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    }
+  .containerRemoveAll{
+    width: 600px;
+    position:relative;
+    top:80%
+  }  
+
+ }
+ @media (max-width:600px) {
+ #title, #firsItem, #eliminarTodas, #insub, #tasks{  
+    width: 300px;
+    height: 100%;
+    position: relative;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    }
+    body{
+      height: 400px;
+    }
+ }
 
 @-webkit-keyframes changeColor {
-  0%{background-position:46% 0%}
-  50%{background-position:55% 100%}
-  100%{background-position:46% 0%}
+  0%{background-position:100% 8%}
+  50%{background-position:55% 55%}
+  100%{background-position:46% 70%}
 }
 @keyframes changeColor {
-  0%{background-position:46% 0%}
-  50%{background-position:55% 100%}
-  100%{background-position:46% 0%}
+  0%{background-position:100% 100%}
+  50%{background-position:100% 100%}
+  100%{background-position:100% 100%}
 }
 
 
@@ -96,6 +125,7 @@ main {
   left: 50%;
   top: 20%;
   transform: translate(-50%, -50%);
+  border: 2px solid black;
 }
 h2 {
   font-style: italic;
@@ -104,19 +134,23 @@ h2 {
 
 #title {
   background: rgba(1, 13, 123, 0.371);
-  border: 1px solid black;
+  border: 1px solid black;;
 }
 
 /*Animation*/
 #title h1{
+  width: 100%;
+  height: 100%;
   position: relative;
-  top:-25%;
+  font-size: large;
+  font-weight: bolder;
+  top: 8%;
   font-family: 'Courier New', Courier, monospace;
   animation-name: drop;
   font-size: 50px;
   animation-duration: 5s;
   background: -webkit-linear-gradient(70deg, black 25%, red 75%);
-  background-size: 20%;
+  background-size: 35%;
   -webkit-background-clip: text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
@@ -124,7 +158,7 @@ h2 {
   background-color: none;
 }
 @keyframes drop {
-  0% {top:-250%; color: black};
+  0% {top:-250%; };
   100%{background: linear-gradient(360deg, black 25%, red 75%, white);
     
    }
@@ -242,7 +276,7 @@ div {
   background-color: black;
   color: white;
 }
-.container{
+/* .container{
     height:600%;
     max-height: 700%;
     position: relative;
@@ -254,9 +288,8 @@ div {
     align-content: flex-start;
     overflow-y:scroll;
     overflow-x: hidden;
-    border-radius: 0;
-   
-}
+    border-radius: 0; */ 
+
 .firsItem{
     max-height: 70%;
     height: 5em;
@@ -264,11 +297,11 @@ div {
 }
 
 #eliminarTodas { 
-  position: fixed;
-  top:85%;
+  position: relative;
+  top:200%;
   left: 50%;
-  transform: translate(-50%, 4%);
-  width: 55em;
+  transform: translate(-50%, 200%);
+  width: 100%;
   height: 6em;
   cursor: pointer;
   border-radius: 15px;
