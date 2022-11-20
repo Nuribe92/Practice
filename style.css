@@ -1,5 +1,5 @@
 body {
-  height: 56em;
+  height: 46em;
   width: 100%;
   margin: auto;
   font-family: -apple-system, blinkMacSystemFont, sans-serif;
@@ -13,8 +13,9 @@ body {
   animation: changeColor 15s infinite;
 
 }
+
  @media (max-width:730px) {
-  #title, #firsItem, #eliminarTodas, #insub, #tasks{  
+  #title, #firsItem, #insub, #tasks{  
     width: 80%;
     position: relative;
     top:20%;
@@ -25,15 +26,17 @@ body {
     text-align: center;
     align-content: center;
     }
-  .containerRemoveAll{
-    width: 600px;
+  /* #eliminarTodas{
+    width: 100%;
     position:relative;
-    top:80%
-  }  
+    top:80%;
+    left: 50%;
+    transform:  translate(-70%, -80%);
+  }   */
 
  }
  @media (max-width:600px) {
- #title, #firsItem, #eliminarTodas, #insub, #tasks{  
+ #title, #firsItem, #insub, #tasks{  
     width: 300px;
     height: 100%;
     position: relative;
@@ -41,8 +44,10 @@ body {
     left: 50%;
     transform: translate(-50%, -20%);
     }
-    body{
-      height: 400px;
+    #eliminarTodas{
+      width:300px;
+          
+
     }
  }
 
@@ -114,7 +119,6 @@ body {
 main {
   height: 100%;
   width: 100%;
-  max-height: 200%;
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
@@ -122,10 +126,11 @@ main {
 }
 #form {
   position: absolute;
+  max-height: 600px;
   left: 50%;
   top: 20%;
   transform: translate(-50%, -50%);
-  border: 2px solid black;
+  
 }
 h2 {
   font-style: italic;
@@ -134,7 +139,7 @@ h2 {
 
 #title {
   background: rgba(1, 13, 123, 0.371);
-  border: 1px solid black;;
+  /* border: 1px solid black;; */
 }
 
 /*Animation*/
@@ -189,6 +194,11 @@ div input {
   border: 1px transparent rgba(7, 31, 44, 0.123);
   color: rgb(255, 255, 255);
   font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  
 }
 ::placeholder {
   color: beige;
@@ -299,9 +309,10 @@ div {
 
 #eliminarTodas { 
   position: relative;
-  top:200%;
-  left: 50%;
-  transform: translate(-50%, 200%);
+  top:90%;
+  left: 0;
+  transform: translate(0, 200%);
+  border: 1px solid black;
   width: 100%;
   height: 6em;
   cursor: pointer;
