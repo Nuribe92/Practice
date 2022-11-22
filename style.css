@@ -29,7 +29,7 @@ body {
     text-align: center;
     align-content: center;
     }
-  #eliminarTodas{
+  #eliminarTodas, .containerx{
     width: 600px;
     position:relative;
     top:80%;
@@ -289,7 +289,7 @@ div {
   position: relative;
   top:50%;
   left:90%;
-  transform: translate(-110%,-75%);
+  transform: translate(-120%,-65%);
   border-radius: 12px;
   height: 4em;
   width: 80%;
