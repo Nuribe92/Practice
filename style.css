@@ -39,11 +39,11 @@ body {
   }   
 #tasks{
    width: 600px;
-   z-index:;
+   
 }
  }
   @media (max-width:600px) { 
- #title, #firsItem, #insub, #tasks{  
+ #title, #firsItem, #insub{  
     width: 300px;
     height: 100%;
     position: relative;
@@ -58,6 +58,14 @@ body {
       left: 50%;
       transform: translate(31%);
       
+    }
+    #tasks{
+      width: 300px;
+      height: 100%;
+      position: relative;
+      top:20%;
+      left: 58%;
+      transform: translate(-50%, -20%);
     }
  } 
  @media (max-width:575px) {
