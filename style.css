@@ -18,7 +18,7 @@ body {
 }
 
 @media (max-width:767px) {
-  #title, #firsItem, #insub, #tasks {  
+  #title, #firsItem, #insub {  
     width: 80%;
     position: relative;
     top:20%;
@@ -37,7 +37,10 @@ body {
     transform: translate(-9%);
     
   }   
-
+#tasks{
+   width: 600px;
+   z-index:;
+}
  }
   @media (max-width:600px) { 
  #title, #firsItem, #insub, #tasks{  
