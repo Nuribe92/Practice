@@ -317,7 +317,6 @@ div {
   position: relative;
     top: -70%;
     left:-1%;
-    width:auto;
     height:600%;
     max-height: 600%;
     flex-direction: column;
