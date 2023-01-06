@@ -1,26 +1,98 @@
+
 body {
-  height: 56em;
+  height: 46em;
   width: 100%;
-  border: 3px solid blue;
   margin: auto;
   font-family: -apple-system, blinkMacSystemFont, sans-serif;
   overflow: auto;
-  overflow-x: hidden;
   background: linear-gradient(
-    315deg,
-    rgba(62, 40, 93, 0.474) 3%,
-    rgba(33, 92, 152, 0.455) 38%,
-    rgba(94, 45, 2, 0.495) 68%,
-    rgba(144, 17, 17, 0.54) 98%
+   315deg,
+   rgba(101, 0, 94, 1) 3%,
+   rgba(60, 132, 206,1) 38%,
+   rgba(48, 238, 226, 1) 68%,
+   rgba(255, 25, 25, 1) 98%
   );
   animation: gradient 15s ease infinite;
-  background-size: 300% 300%;
+  background-size: 400% 400%;
   background-attachment: fixed;
-  @media (max-width: 325) {
-  }
+  overflow-x: hidden;
 }
 
-/*@keyframes gradient {*
+@media (max-width:767px) {
+  #title, #firsItem, #insub {  
+    width: 80%;
+    position: relative;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    }
+  #eliminarTodas, .containerx{
+    width: 600px;
+    position:relative;
+    top:80%;
+    left: 50%;
+    transform: translate(-9%);
+    
+  }   
+#tasks{
+   width: 600px;
+   
+}
+ }
+  @media (max-width:600px) { 
+ #title, #firsItem, #insub{  
+    width: 300px;
+    height: 100%;
+    position: relative;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    }
+    #eliminarTodas{
+      width: 300px;
+      position:relative;
+      top:80%;
+      left: 50%;
+      transform: translate(31%);
+      
+    }
+    #tasks{
+      width: 300px;
+      height: 100%;
+      position: relative;
+      top:20%;
+      left: 58%;
+      transform: translate(-50%, -20%);
+    }
+ } 
+ @media (max-width:575px) {
+  #eliminarTodas{
+    width: 300px;
+    position:relative;
+    top:80%;
+    left: 50%;
+    transform: translate(70%);
+    
+  }
+  }
+ 
+@-webkit-keyframes changeColor {
+  0%{background-position:100% 8%}
+  50%{background-position:55% 55%}
+  100%{background-position:46% 70%}
+}
+@keyframes changeColor {
+  0%{background-position:100% 100%}
+  50%{background-position:100% 100%}
+  100%{background-position:100% 100%}
+}
+
+
+@keyframes gradient {
   0% {
     background-position: 0% 0%;
   }
@@ -31,7 +103,7 @@ body {
     background-position: 0% 0%;
   }
 }
-/*.wave {
+.wave {
   background: rgb(255 255 255/25%);
   border-radius: 1000% 1000% 0 0;
   position: fixed;
@@ -70,14 +142,12 @@ body {
   100% {
     transform: translateX(1);
   }
-}*/
+}
 
 
 main {
   height: 100%;
   width: 100%;
-  max-height: 200%;
-  border: 2px solid red;
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
@@ -85,9 +155,11 @@ main {
 }
 #form {
   position: absolute;
+  max-height: 600px;
   left: 50%;
   top: 20%;
   transform: translate(-50%, -50%);
+  
 }
 h2 {
   font-style: italic;
@@ -96,19 +168,23 @@ h2 {
 
 #title {
   background: rgba(1, 13, 123, 0.371);
-  border: 1px solid black;
+  /* border: 1px solid black;; */
 }
 
 /*Animation*/
 #title h1{
+  width: 100%;
+  height: 100%;
   position: relative;
-  top:-25%;
+  font-size: large;
+  font-weight: bolder;
+  top: 8%;
   font-family: 'Courier New', Courier, monospace;
   animation-name: drop;
   font-size: 50px;
   animation-duration: 5s;
   background: -webkit-linear-gradient(70deg, black 25%, red 75%);
-  background-size: 20%;
+  background-size: 35%;
   -webkit-background-clip: text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
@@ -116,8 +192,8 @@ h2 {
   background-color: none;
 }
 @keyframes drop {
-  0% {top:-320px; color: black};
-  100%{background: -webkit-linear-gradient(360deg, black 25%, red 75%, white);
+  0% {top:-250%; };
+  100%{background: linear-gradient(360deg, black 25%, red 75%, white);
     
    }
   /*25%{ top:-150%;background: linear-gradient(90deg, red 75%, black 25%)}
@@ -147,6 +223,11 @@ div input {
   border: 1px transparent rgba(7, 31, 44, 0.123);
   color: rgb(255, 255, 255);
   font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  
 }
 ::placeholder {
   color: beige;
@@ -179,8 +260,14 @@ div {
 .tarea {
   display:grid;
   grid-template-columns: 80% 20%;
+  max-height: 5em;
   min-height: 5em;
-  width: 98%
+  width: 98%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  align-items: center;
+  color: white;
+  
   
 }
 ::-webkit-scrollbar {
@@ -190,8 +277,7 @@ div {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
     opacity: 0;
-    
-    
+        
   }
   ::-webkit-scrollbar-thumb {
     color: transparent;
@@ -211,53 +297,52 @@ div {
   background: rgba(1, 13, 123, 0.371);
 }
 
-#internalButton {
+.botonInterno {
   position: relative;
   top:50%;
   left:90%;
-  transform: translate(-90%,-50%);
+  transform: translate(-120%,-65%);
   border-radius: 12px;
   height: 4em;
   width: 80%;
   cursor: pointer;
-  margin: auto 100px auto auto;
+  margin: auto auto auto auto;
  
   
 }
-#internalButton:hover {
+.botonInterno:hover {
   background-color: black;
   color: white;
 }
-.container{
+.containerx{
+  position: relative;
+    top: -70%;
+    left:-1%;
     height:600%;
-    max-height: 700%;
-    position: relative;
-    display: flex;
+    max-height: 600%;
     flex-direction: column;
-    align-items: flex-start;
-    
-    justify-content: flex-start;
-    align-content: flex-start;
-    overflow-y:scroll;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    /* align-content: flex-start; */
     overflow-x: hidden;
-    border-radius: 0;
-   
-}
+   }
 .firsItem{
     max-height: 70%;
     height: 5em;
     border: 1px solid black;
+    
 }
 
 #eliminarTodas { 
-  position: fixed;
-  top:85%;
-  left: 50%;
-  transform: translate(-50%, 4%);
-  width: 55em;
-  height: 6em;
+  position: relative;
+  top:-62%;
+  left: 0;
+  /* transform: translate(0, );
+  border: 1px solid black;
+  width: 100%; 
+  height: 6em;*/
   cursor: pointer;
   border-radius: 15px;
-  opacity: 65%;
+  opacity: 65%; 
   background-color: red;
 }
