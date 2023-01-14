@@ -215,6 +215,7 @@ h2 {
   text-align: center;
   justify-content: center;
   background: rgba(7, 31, 44, 0.123);
+  box-shadow:rgb(255, 255, 255);
 }
 div input {
   text-align: center;
@@ -227,12 +228,13 @@ div input {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  
+  box-shadow:rgb(255, 255, 255);
 }
 ::placeholder {
   color: beige;
 }
 #newTask {
+  
   border-radius: 12px;
   height: 80%;
   width: 80%;
