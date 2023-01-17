@@ -194,7 +194,6 @@ h2 {
 @keyframes drop {
   0% {top:-250%; };
   100%{background: linear-gradient(360deg, black 25%, red 75%, white);
-    
    }
   /*25%{ top:-150%;background: linear-gradient(90deg, red 75%, black 25%)}
   /*50% {background: -webkit-linear-gradient(-180deg,green 75%, black 75%,);
